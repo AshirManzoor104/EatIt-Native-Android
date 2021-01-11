@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="3dp"
+    app:contentPadding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/ivProductImage"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:adjustViewBounds="true"/>
+        <TextView
+            android:id="@+id/tvPoductName"
+            android:layout_toRightOf="@id/ivProductImage"
+            android:layout_toEndOf="@id/ivProductImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Some product name"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRemove"
+            android:layout_toRightOf="@id/ivProductImage"
+            android:layout_toEndOf="@id/ivProductImage"
+            android:layout_alignBottom="@id/ivProductImage"
+            android:layout_below="@id/tvProuctDiscount"
+            android:textColor="#AA2323"
+            android:text="Remove Item"/>
+        <TextView
+            android:id="@+id/tvProuctDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIscount Rs.50"
+            android:layout_below="@id/tvPoductName"
+            android:layout_toEndOf="@id/ivProductImage"
+            android:layout_toRightOf="@id/ivProductImage"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProductAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. amount"
+                android:textColor="@color/colorAccent"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ibRemove"
+                    android:layout_width="28dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_remove_black_24dp"
+                    android:background="@drawable/bg_btn_remove"/>
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="36dp"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:text="1"
+                    android:background="#ECECEC"/>
+                <ImageButton
+                    android:id="@+id/ibAdd"
+                    android:layout_width="28dp"
+                    android:layout_height="24dp"
+                    app:srcCompat="@drawable/ic_add_black_24dp"
+                    android:background="@drawable/bg_btn_add"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_layout_cart"
+            android:id="@+id/rvCart">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

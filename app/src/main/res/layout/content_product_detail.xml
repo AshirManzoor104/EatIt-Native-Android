@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ProductDetailActivity"
+    tools:showIn="@layout/activity_product_detail">
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/ivProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+
+        />
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Name"
+            android:textSize="16sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProductName"/>
+        <TextView
+
+            android:textSize="18sp"
+            android:text="Some Description klshfj.kBc.kXBXKJBVj;sdGjcxkznvdhvb"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProductPrice"/>
+
+        <TextView
+            android:textSize="16sp"
+            android:text="Some Description klshfj.kBc.kXBXKJBVj;sdGjcxkznvdhvb"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProductDesuription"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/ibRemove"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_remove"
+                app:srcCompat="@drawable/ic_remove_black_24dp"/>
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="1"
+                android:gravity="center"/>
+            <ImageButton
+                android:id="@+id/ibAdd"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_btn_add"
+                app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+
+            <Button
+                android:id="@+id/btnAddToCart"
+                android:layout_width="match_parent"
+                android:background="@color/colorAccent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_height="wrap_content"
+                android:text="Add To Cart"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
